@@ -1,0 +1,625 @@
+@import url("fonts.css");
+
+@import url("reset.css");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  /* line-height: normal; */
+  color: #343434;
+  background-color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: clip;
+}
+
+.wrapper .page {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+[class*="--margin"] {
+  margin-bottom: 67px;
+}
+
+.header {
+  /* position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5; */
+  padding-top: 16px;
+  padding-bottom: 9px;
+}
+
+.header__container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* gap: 20px; */
+}
+
+.header__inner {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-left: 154px;
+}
+
+.header__nav {
+  flex-basis: 301px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin-right: 79px;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 64px;
+  row-gap: 10px;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__link {
+  font-family: "Open Sans";
+  /* position: relative; */
+  font-weight: 400;
+  line-height: 1.375;
+  /* 22/16 */
+}
+
+.phones {
+  position: absolute;
+  opacity: 0;
+  /* display: flex;
+  flex-direction: column;
+  row-gap: 5px; */
+  width: 159px;
+  left: 50%;
+  top: 100%;
+  padding-top: 5px;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+
+.phones__list {
+  border-radius: 5px;
+  background-color: #FFF;
+  box-shadow: 0px 4px 14px 0px #0000000d;
+  padding: 10px 24px;
+}
+
+.phones__item a {
+  font-weight: 400;
+  color: #343434;
+}
+
+.phones__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+@media (any-hover: hover) {
+  .header__item:hover .phones {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@media (any-hover: hover) {
+  .phones__item:hover a {
+    text-decoration: underline;
+  }
+}
+
+.header__link:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid #343434;
+  border-radius: 5px;
+}
+
+.header__link:active {
+  color: #5D5D5D;
+}
+
+.logo {
+  /* max-width: 173px; */
+  width: 173px;
+  margin-right: 265px;
+}
+
+.logo img {
+  /* width: 100%; */
+}
+
+.logo--margin {
+  margin-bottom: 24px;
+}
+
+.header__action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 21px;
+  row-gap: 10px;
+}
+
+.action__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 21px;
+  row-gap: 10px;
+}
+
+.action__item {
+  flex-basis: 25px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 24px;
+}
+
+.action__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 24px; */
+}
+
+.action__link::after {
+  position: absolute;
+  content: "";
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  transition: background-color 0.3s;
+  z-index: -1;
+}
+
+.action__images {
+  /* width: 100%; */
+}
+
+.action__link:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid #343434;
+  border-radius: 5px;
+}
+
+@media (any-hover: hover) {
+  .action__link:hover.action__link::after {
+    background-color: #d2dada;
+  }
+}
+
+/* Секція Hero-section */
+
+.hero-screen--margin {
+  margin-bottom: 67px;
+}
+
+.hero-screen__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  column-gap: 20px;
+  row-gap: 15px;
+}
+
+.hero-screen__image {
+  flex: 0 1 500px;
+}
+
+.text-block>* {
+  margin-bottom: 16px;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 0 1 650px;
+}
+
+.text-block__title h2,
+.section-title {
+  font-family: Jost;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.section-title {
+  text-transform: capitalize;
+}
+
+.text-block__title--align {
+  text-align: right;
+}
+
+.section-title--align {
+  text-align: center;
+}
+
+.text-block__paragraf {
+  margin-bottom: 24px;
+}
+
+.text-block__paragraf p {
+  font-family: Jost;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+}
+
+.btn-shop {
+  border-radius: 5px;
+  background-color: #1E4646;
+  padding: 13px 65px;
+  transition: background-color 0.5s;
+}
+
+.btn-shop span {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #FBFBFB;
+  transition: color 0.3s;
+}
+
+
+.btn-shop:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid #343434;
+  border-radius: 5px;
+}
+
+@media (any-hover: hover) {
+  .btn-shop:hover {
+    background-color: #789090;
+  }
+}
+
+.btn-shop:active {
+  background-color: #FBFBFB;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.10);
+}
+
+.btn-shop:active span {
+  color: #343434;
+}
+
+.btn-shop:disabled {
+  border: 1px solid #AEAEAE;
+  background-color: #EDF1F1;
+}
+
+.btn-shop:disabled span {
+  color: #AEAEAE;
+}
+
+.text-block>*:last-child {
+  margin-bottom: 0;
+}
+
+/* Секція статей Quality Ingredients, Recipe Formulation, The Difference in Every Bowl */
+
+/* .about-product--margin */
+
+.about-product__container>* {
+  margin-bottom: 64px;
+}
+
+/* Блок Quality Ingredients */
+
+.ingredients__container,
+.recipe__container,
+.difference__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  column-gap: 20px;
+  row-gap: 15px;
+  max-width: 1154px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.text-block-ingredients>*,
+.text-block-recipe>*,
+.text-block-difference>* {
+  margin-bottom: 8px;
+}
+
+.text-block-ingredients,
+.text-block-recipe,
+.text-block-difference {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 552px;
+}
+
+.text-block-ingredients__title,
+.text-block-recipe__title,
+.text-block-difference__title {
+  font-family: Jost;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.text-block-ingredients__paragraf,
+.text-block-recipe__paragraf,
+.text-block-difference__paragraf {
+  margin-bottom: 45px;
+}
+
+.text-block-ingredients>*:last-child,
+.text-block-recipe>*:last-child,
+.text-block-difference>*:last-child {
+  margin-bottom: 0;
+}
+
+.ingredients__image {
+  flex: 0 1 320px;
+}
+
+/* Блок Recipe Formulation */
+
+.recipe__image,
+.difference__image {
+  flex: 0 1 332px;
+}
+
+/* Блок The Difference in Every Bowl */
+
+.about-product__container>*:last-child {
+  margin-bottom: 0;
+}
+
+/* Секція Novelties */
+
+.novelties--title {
+  margin-bottom: 32px;
+}
+
+.product-card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 64px;
+  row-gap: 30px;
+}
+
+.product-card--margin {
+  margin: 0 53px;
+}
+
+.product-card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 335px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  border-radius: 5px;
+  border: 1px solid #efefef;
+  padding: 27px 36px;
+}
+
+.product-card__image {
+  flex-basis: 239px;
+  /* flex-grow: 1; */
+  flex-shrink: 0;
+  max-width: 140px;
+  margin-bottom: 24px;
+}
+
+.product-card__image--size {
+  flex-basis: 215px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 130px;
+}
+
+.product-card__image img {
+  /* width: 100%; */
+}
+
+.product-card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* flex-basis: 129px; */
+  flex-grow: 1;
+  text-align: center;
+  max-width: 183px;
+  margin-bottom: 8px;
+}
+
+.text-product-card {
+  font-family: Jost;
+  font-weight: 500;
+}
+
+.text-product-card span {
+  display: inline-block;
+  font-family: Jost;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  flex-grow: 1;
+  margin-bottom: 3px;
+  /*Не працює з рядковим елементом, додам йому inline-block? але із-за того, що батьківський елемент flex все працює*/
+}
+
+.text-product-card h4 {
+  /* flex-basis: 70px; */
+  font-size: 24px;
+  line-height: normal;
+  color: #1E4646;
+}
+
+.text-product-card~span {
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 16px;
+
+}
+
+.btn-basket {
+  border-radius: 5px;
+  /* box-shadow: 0 0 0 1px #1e4646; */
+  background-color: #1E4646;
+  padding: 13px 25px;
+  transition: background-color 0.5s, box-shadow 0.3s;
+}
+
+.btn-basket span {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: #FBFBFB;
+  text-transform: uppercase;
+}
+
+.btn-basket:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid #343434;
+  border-radius: 5px;
+}
+
+@media (any-hover: hover) {
+  .btn-basket:hover {
+    background-color: #789090;
+    /* box-shadow: none; */
+  }
+}
+
+.btn-basket:active {
+  background-color: #FBFBFB;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.10);
+}
+
+.btn-basket:active span {
+  color: #343434;
+  /* background-color: #FBFBFB; */
+  box-shadow: 0px 4px 10px 0px #0000001a;
+}
+
+.btn-basket:disabled {
+  border: 1px solid #AEAEAE;
+  background-color: #EDF1F1;
+}
+
+.btn-basket:disabled span {
+  color: #AEAEAE;
+}
+
+/* Секція footer */
+
+.footer {
+  border-top: 1px solid #D6D6D6;
+  padding: 32px 0;
+}
+
+.footer__container {}
+
+.logo {}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+.footer__menu {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-basis: 598px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  column-gap: 114px;
+}
+
+.menu-footer {}
+
+.menu-footer__shop h4,
+.menu-footer__contacts h4,
+.menu-footer__about-us h4 {
+  font-family: Jost;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  color: #343434;
+}
+
+.menu-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  row-gap: 6px;
+}
+
+.menu-footer__contacts a,
+.menu-footer__about-us span {
+  line-height: normal;
+}
+
+.menu-footer__about-us {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.footer-action {
+  display: flex;
+  align-self: flex-end;
+  column-gap: 37px;
+}
+
+.footer-action__instagram {
+  align-self: center;
+  max-width: 42px;
+}
+
+.footer-action__instagram img {
+  width: 100%;
+}
+
+.footer-action__facebook {
+  max-width: 48px;
+}
+
+.footer-action__facebook img {
+  width: 100%;
+}
