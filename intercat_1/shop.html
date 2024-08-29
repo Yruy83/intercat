@@ -20,12 +20,12 @@
                 </a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#" target="_blank" rel="noopener noreferrer">
+                <a class="header__link header__link--active " href="#">
                   Shop
                 </a>
               </li>
               <li class="header__item">
-                <a class="header__link" href="#" target="_blank" rel="noopener noreferrer">
+                <a class="header__link" href="#">
                   Contacts
                 </a>
                 <div class="phones">
@@ -46,7 +46,9 @@
             </ul>
           </nav>
           <div class="logo">
-            <img src="./img/header_icons/logo.svg" alt="website logo">
+            <a class="logo__img" href="./index.html">
+              <img src="./img/header_icons/logo.svg" alt="website logo">
+            </a>
           </div>
           <div class="header__action action">
             <!-- Прибрали з макету 25.07 -->
@@ -166,7 +168,10 @@
 					</div>
 					<form class="filter-search__form form-filter-search" action="#">
 						<input class="form-filter-search__input" type="search" placeholder="product search">
-						<button class="form-filter-search__button">
+						<button class="form-filter-search__button" type="button">
+              <span class="sr-only">
+                search
+              </span>
 						</button>
 					</form>
 				</div>
@@ -175,7 +180,9 @@
 		<footer class="footer">
       <div class="footer__container">
         <div class="logo logo--margin ">
-          <img src="./img/header_icons/logo.svg" alt="website logo">
+          <a class="logo__img" href="./index.html">
+            <img src="./img/header_icons/logo.svg" alt="website logo">
+          </a>
         </div>
         <div class="footer__wrapper">
           <div class="footer__menu menu-footer">
@@ -197,7 +204,11 @@
             </div>
             <div class="menu-footer__about-us">
               <h4>
-                About Us
+                <a href="./about-us.html" target="_blank" rel="noopener noreferrer">
+                  <span>
+                    About Us
+                  </span>
+                </a>
               </h4>
               <span>
                 FAQ

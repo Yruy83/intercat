@@ -34,13 +34,14 @@ body {
 }
 
 .header {
-  /* position: sticky;
+	position: sticky;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 5; */
-  padding-top: 16px;
-  padding-bottom: 9px;
+  z-index: 5;
+	background-color: #fafafa;
+	padding-top: 16px;
+	padding-bottom: 9px;
 }
 
 .header__container {
@@ -81,6 +82,16 @@ body {
   font-weight: 400;
   line-height: 1.375;
   /* 22/16 */
+}
+
+.header__link--active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -4px;
+  background-color: #343434;
 }
 
 .phones {
@@ -377,6 +388,12 @@ body {
 .text-block-recipe__paragraf,
 .text-block-difference__paragraf {
   margin-bottom: 45px;
+}
+
+.text-block-ingredients__paragraf p,
+.text-block-recipe__paragraf p,
+.text-block-difference__paragraf p {
+  line-height: 1.375; /* 22/16 */
 }
 
 .text-block-ingredients>*:last-child,
